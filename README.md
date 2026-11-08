@@ -43,6 +43,15 @@ Cada funcionalidad compleja se desarrolló dentro del directorio `specs/` siguie
 **Especificaciones implementadas:**
 - `specs/001-heat-map/`: Mapa de calor de 12 semanas (84 días).
 - `specs/002-semanal-objetivo/`: Sistema de objetivo semanal con ventana móvil de 7 días.
+### 4. Agentes y flujo SDD
+| Agente | Rol |
+| --- | --- |
+| `coordinator` | Dirige el flujo y exige aprobación humana de spec y plan. No edita código. |
+| `planner` | Redacta spec, plan y tareas. |
+| `implementer` | Ejecuta una tarea por vez, con tests en verde. |
+| `reviewer` | Hace QA de la spec y valida requisito por requisito. |
+
+Comando `/feature`: planifica cambios pequeños sin tocar código hasta aprobar el plan.
 
 ---
 
