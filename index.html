@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diario de Estudio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>📖 Diario de Estudio</h1>
+            <p class="subtitle">Registra tus sesiones y mantén tu hábito</p>
+        </header>
+
+        <section class="streak-card">
+            <h2>Estadísticas de Estudio</h2>
+            <div class="streaks-container">
+                <div class="streak-box">
+                    <div class="streak-display">
+                        <span id="streak-number">0</span>
+                        <span class="fire-icon">🔥</span>
+                    </div>
+                    <p class="streak-text">Racha actual</p>
+                </div>
+                <div class="streak-divider"></div>
+                <div class="streak-box">
+                    <div class="streak-display">
+                        <span id="weekly-minutes-number">0</span>
+                        <span class="clock-icon">⏱️</span>
+                    </div>
+                    <p class="streak-text">Minutos semana</p>
+                </div>
+                <div class="streak-divider"></div>
+                <div class="streak-box">
+                    <div class="streak-display">
+                        <span id="best-streak-number">0</span>
+                        <span class="trophy-icon">🏆</span>
+                    </div>
+                    <p class="streak-text">Mejor racha</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="streak-card monthly-card">
+            <div class="streaks-container">
+                <div class="streak-box">
+                    <div class="streak-display">
+                        <span id="monthly-days-number">0</span>
+                    </div>
+                    <p class="streak-text">Días estudiados este mes</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Nueva Sesión</h2>
+            <form id="study-form">
+                <div class="form-group">
+                    <label for="date">Fecha</label>
+                    <input type="date" id="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Tema</label>
+                    <input type="text" id="subject" placeholder="Ej: Matemáticas, Programación..." required>
+                </div>
+                <div class="form-group">
+                    <label for="minutes">Minutos</label>
+                    <input type="number" id="minutes" min="1" placeholder="Ej: 45" required>
+                </div>
+                <button type="submit" class="btn-primary">Guardar Sesión</button>
+            </form>
+        </section>
+
+        <section class="list-section">
+            <h2>Historial de Sesiones</h2>
+            <div id="sessions-container">
+            </div>
+        </section>
+
+        <section class="heat-map-section">
+            <h2>Mapa de Calor</h2>
+            <div id="heat-map" class="heat-map-container"></div>
+            <p id="heat-map-summary">Toca un día para ver detalles</p>
+        </section>
+
+        <section class="weekly-goal-section">
+            <h2>Objetivo Semanal</h2>
+            <div class="goal-container">
+                <p class="goal-label">Meta semanal: <span id="weekly-goal-value">Sin meta definida</span></p>
+                <label for="new-goal">Establecer nueva meta:</label>
+                <div class="goal-input-group">
+                    <input type="number" id="new-goal" min="0" placeholder="Ej: 30">
+                    <button id="set-goal-btn" class="btn-secondary">Aplicar</button>
+                </div>
+                <p class="progress-description">Estudiado <span id="accumulated-minutes">0</span> min en los últimos 7 días</p>
+                <progress id="progress-bar" value="0" max="100"></progress>
+                <span id="progress-percentage" class="percentage-hidden">Progreso 0%</span>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

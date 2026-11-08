@@ -1,0 +1,19 @@
+# Dependencias y compilación (no usadas en este proyecto)
+node_modules/
+
+# Logs y depuración
+*.log
+npm-debug.log*
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos de respaldo y editores
+*.swp
+*.bak
+*~
+.vscode/
+.idea/
+
