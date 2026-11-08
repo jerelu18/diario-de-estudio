@@ -1,4 +1,5 @@
 # 📓 Diario de Estudio — Spec-Driven Agentic Development
+🔗 **Demo en vivo:** https://jerelu18.github.io/diario-de-estudio/
 
 > Aplicación web *Zero-Dependencies* construida y mantenida mediante desarrollo asistido por agentes con **OpenCode**, gobernanza estricta (**Constitución y AGENTS.md**) y desarrollo guiado por especificaciones (**Spec-Driven Development**).
 
